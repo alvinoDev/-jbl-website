@@ -34,10 +34,22 @@ const blurHeader = () => {
 };
 window.addEventListener('scroll', blurHeader);
 
-// SWIPER FAVORITES
-
 /* ====================== MAIN ====================== */
 
+// SECTION - FAVORITES
+let swiperFavorite = new Swiper('.favorite_swiper', {
+    loop:true,
+    slidesPerView: 'auto',
+    centeredSlides: 'auto',
+    grabCursor: true,
+    
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+        }
+    }
+});
+// SWIPER FAVORITES
 /* ================= SCROLL ACTIONS ================= */
 
 // SHOW SCROLL UP

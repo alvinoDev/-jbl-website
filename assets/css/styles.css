@@ -107,7 +107,7 @@ img {
 	padding-block: 5rem 1rem;
 }
 
-.section__title {
+.section_title {
 	font-size: var(--h2-font-size);
 	text-align: center;
 	margin-bottom: 1.5rem;
@@ -375,8 +375,47 @@ img {
 }
 
 /* ==================== FAVORITE ==================== */
-/* Swiper Class */
+.favorite_container {
+	padding-top: 2rem;
+}
 
+.favorite_article {
+	width: 220px;
+	display: grid;
+	justify-items: center;
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+	scale: .8;
+	transition: filter .3s,csale .3s;
+	-webkit-transition: filter .3s,csale .3s;
+	-moz-transition: filter .3s,csale .3s;
+	-ms-transition: filter .3s,csale .3s;
+	-o-transition: filter .3s,csale .3s;
+}
+
+.favorite_img {
+	width: 220px;
+	margin-bottom: 1.5rem;
+}
+
+.favorite_model {
+	background: var(--gradient-color);
+	padding: 0.5rem 1.5rem;
+	color: var(--white-color);
+	border-radius: 4rem;
+	-webkit-border-radius: 4rem;
+	-moz-border-radius: 4rem;
+	-ms-border-radius: 4rem;
+	-o-border-radius: 4rem;
+}
+
+/* Swiper Class */
+.swiper-slide-active,
+.swiper-slide-duplicate-active {
+	filter: blur(0);
+	-webkit-filter: blur(0);
+	scale: 1;
+}
 /* ====================== MODEL ===================== */
 
 /* ===================== SPONSOR ==================== */
