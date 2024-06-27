@@ -37,23 +37,30 @@ window.addEventListener('scroll', blurHeader);
 /* ====================== MAIN ====================== */
 
 // SECTION - FAVORITES
+// Swiper Favorites
 let swiperFavorite = new Swiper('.favorite_swiper', {
-    loop:true,
-    slidesPerView: 'auto',
-    centeredSlides: 'auto',
-    grabCursor: true,
-    
-    breakpoints: {
-        768: {
-            slidesPerView: 3,
-        }
-    }
+	loop: true,
+	slidesPerView: 'auto',
+	centeredSlides: 'auto',
+	grabCursor: true,
+
+	breakpoints: {
+		768: {
+			slidesPerView: 3,
+		},
+	},
 });
-// SWIPER FAVORITES
+
 /* ================= SCROLL ACTIONS ================= */
 
 // SHOW SCROLL UP
-
+const scrollUp = () => {
+	const scrollUp = document.getElementById('scrollup');
+	this.scrollY >= 350
+		? scrollUp.classList.add('show_scroll')
+		: scrollUp.classList.remove('show_scroll');
+};
+window.addEventListener('scroll', scrollUp);
 // SCROLL SECTIONS ACTIVE LINK
 
 // SCROLL REVEAL ANIMATION
