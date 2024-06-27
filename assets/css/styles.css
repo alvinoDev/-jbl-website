@@ -501,8 +501,35 @@ img {
 .model_button {
 	justify-self: center;
 }
+
 /* ===================== SPONSOR ==================== */
 
+.sponsor_container {
+	padding-block: .5rem 4.5rem;
+	grid-template-columns: repeat(2, max-content);
+	justify-content: center;
+	align-items: center;
+	gap: 5rem 4rem;
+}
+
+.sponsor_img {
+	width: 100px;
+	transition: transform .4s;
+	-webkit-transition: transform .4s;
+	-moz-transition: transform .4s;
+	-ms-transition: transform .4s;
+	-o-transition: transform .4s;
+}
+
+.sponsor_img:hover {
+	filter: brightness(2);
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-webkit-filter: brightness(2);
+}
 /* ===================== FOOTER ===================== */
 
 /* =================== SCROLL BAR =================== */
