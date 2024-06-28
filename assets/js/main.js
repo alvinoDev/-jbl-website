@@ -68,19 +68,54 @@ const sections = document.querySelectorAll('section[id]');
 const scrollActive = () => {
 	const scrollDown = window.scrollY;
 
-	sections.forEach(current => {
+	sections.forEach((current) => {
 		const sectionHeight = current.offsetHeight,
 			sectionTop = current.offsetTop - 58,
 			sectionId = current.getAttribute('id'),
-			sectionsClass = document.querySelector('.nav_menu a[href*=' + sectionId + ']');
-		if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
+			sectionsClass = document.querySelector(
+				'.nav_menu a[href*=' + sectionId + ']',
+			);
+		if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
 			sectionsClass.classList.add('active_link');
-		}else {
+		} else {
 			sectionsClass.classList.remove('active_link');
 		}
 	});
-}
+};
 window.addEventListener('scroll', scrollActive);
-// SCROLL REVEAL ANIMATION
+
+/* ============= SCROLL REVEAL ANIMATION ============ */
+const scrollReveal = ScrollReveal({
+	origin: 'top',
+	distance: '60px',
+	duration: 2500,
+	delay: 400,
+	// reset: true, //Animations repeat
+});
+
+scrollReveal.reveal(
+	`.home_social, .favorite_container, .sponsor_container, .footer`,
+);
+scrollReveal.reveal(`.home_title span:nth-child(1)`, {
+	origin: 'left',
+	opacity: 1,
+});
+
+scrollReveal.reveal(`.home_title span:nth-child(3)`, {
+	origin: 'right',
+	opacity: 1,
+});
+
+scrollReveal.reveal(`.home_tooltip, .home_button, .model_button`, {
+	origin: 'bottom',
+});
+
+scrollReveal.reveal(`.about_data`, {
+	origin: 'left',
+});
+
+scrollReveal.reveal(`.about_img, .model_tooltip`, {
+	origin: 'right',
+});
 
 /* ===================== FOOTER ===================== */
